@@ -49,8 +49,8 @@ class AddClasses extends Migration
         ]);
 
         $this->forge->addKey('class_id', true);
-        // $this->forge->addForeignKey('class_teacher_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('timetable_id', 'timetable', 'timetable_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('class_teacher_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('timetable_id', 'timetable', 'timetable_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('classes');
     }
