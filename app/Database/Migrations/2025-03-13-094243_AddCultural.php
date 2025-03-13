@@ -72,6 +72,7 @@ class AddCultural extends Migration
                 'default' => null,
             ],
         ]);
+        
 
         $this->forge->addPrimaryKey('event_id');
         $this->forge->addForeignKey('event_coordinator_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
