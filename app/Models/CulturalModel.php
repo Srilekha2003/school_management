@@ -12,19 +12,7 @@ class CulturalModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = [
-        'event_id',
-        'event_name',
-        'date_time',
-        'venue',
-        'category',
-        'event_coordinator_id',
-        'awards_recognitions',
-        'remarks',
-        'description',
-        'participants'
-    ];
-    
+    protected $allowedFields    = ['event_name','date_time','venue','category','event_coordinator_id','awards_recognitions','remarks','description','participants'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

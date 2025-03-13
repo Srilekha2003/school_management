@@ -8,7 +8,7 @@ class AddHostel extends Migration
 {
     public function up()
     {
-        // Hostels Table
+        
         $this->forge->addField([
             'hostel_id' => [
                 'type'           => 'BIGINT',

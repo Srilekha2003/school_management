@@ -69,8 +69,8 @@ class AddExam extends Migration
         ]);
 
         $this->forge->addPrimaryKey('exam_id');
-        // $this->forge->addForeignKey('subject_id', 'subjects', 'subject_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('subject_id', 'subjects', 'subject_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('exams');
     }

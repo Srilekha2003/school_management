@@ -34,7 +34,7 @@ class AddProgressCard extends Migration
                 'constraint' => 10
             ],
             'percentage' => [
-                'type'       => 'DECIMAL',
+                'type'       => 'DOUBLE',
                 'constraint' => '5,2'
             ],
             'rank' => [
@@ -84,7 +84,7 @@ class AddProgressCard extends Migration
 
         $this->forge->addPrimaryKey('progress_card_id');
         $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('exam_id', 'exams', 'exam_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('exam_id', 'exams', 'exam_id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('progress_cards');
     }
 

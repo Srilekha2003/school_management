@@ -74,12 +74,15 @@ class AddCultural extends Migration
         ]);
 
         $this->forge->addPrimaryKey('event_id');
-        // $this->forge->addForeignKey('event_coordinator_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
-        $this->forge->createTable('events');
+        $this->forge->addForeignKey('event_coordinator_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
+
+      
+        $this->forge->createTable('culturals'); 
     }
 
     public function down()
     {
-        $this->forge->dropTable('culturals');
+       
+        $this->forge->dropTable('culturals', true);
     }
 }

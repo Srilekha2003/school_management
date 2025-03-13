@@ -29,7 +29,7 @@ class AddAttendance extends Migration
                 'type'       => 'BIGINT',
                 'constraint' => 20,
                 'unsigned'   => true,
-                'null'       => true, // Nullable, as a teacher might not always be assigned
+                'null'       => true, 
             ],
             'status' => [
                 'type'       => 'ENUM',
@@ -38,12 +38,12 @@ class AddAttendance extends Migration
             ],
             'remarks' => [
                 'type'       => 'TEXT',
-                'null'       => true, // Optional comments
+                'null'       => true, 
             ],
             'percentage_report' => [
-                'type'       => 'DECIMAL',
-                'constraint' => '5,2', // Example: 99.99%
-                'null'       => true, // Optional, can be calculated dynamically
+                'type'       => 'DOUBLE',
+                'constraint' => '5,2', 
+                'null'       => true,
             ],
             'created_at' => [
                 'type'       => 'DATETIME',
@@ -60,8 +60,8 @@ class AddAttendance extends Migration
         ]);
 
         $this->forge->addPrimaryKey('attendance_id');
-        // $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('teacher_id', 'teachers', 'teacher_id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('teacher_id', 'teachers', 'teacher_id', 'SET NULL', 'CASCADE');
 
         $this->forge->createTable('attendances');
     }
