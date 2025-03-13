@@ -51,7 +51,7 @@ class AddNotification extends Migration
         ]);
 
         $this->forge->addPrimaryKey('notification_id');
-        // $this->forge->addForeignKey('timetable_id', 'timetable', 'timetable_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('timetable_id', 'timetable', 'timetable_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('notifications');
     }

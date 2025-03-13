@@ -130,8 +130,8 @@ class AddStudent extends Migration
         $this->forge->addPrimaryKey('student_id');
 
         // Foreign Keys
-        // $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('parent_id', 'parents', 'parent_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('parent_id', 'parents', 'parent_id', 'CASCADE', 'CASCADE');
 
         // Create Table
         $this->forge->createTable('students');
