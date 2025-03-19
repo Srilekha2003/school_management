@@ -1,19 +1,15 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
-/*
- *---------------------------------------------------------------
- * SET THE CURRENT DIRECTORY
- *---------------------------------------------------------------
- */
-
-// Path to the front controller (this file)
-define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
-
-// Ensure the current directory is pointing to the front controller's directory
-if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
-    chdir(FCPATH);
+// Handle preflight requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    http_response_code(200);
+    exit();
 }
 
+define('FCPATH', realpath(__DIR__) . DIRECTORY_SEPARATOR); 
 /*
  *---------------------------------------------------------------
  * CHECK PHP VERSION
@@ -40,10 +36,10 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
  */
 
 // Ensure that autoload and system boot files are included correctly
-require FCPATH . '../vendor/autoload.php';
+require FCPATH . 'vendor/autoload.php';
 
 // LOAD OUR PATHS CONFIG FILE
-require FCPATH . '../app/Config/Paths.php';
+require FCPATH . 'app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
 
 $paths = new Config\Paths();
