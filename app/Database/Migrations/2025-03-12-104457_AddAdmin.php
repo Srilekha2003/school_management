@@ -15,35 +15,21 @@ class AddAdmin extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true
             ],
-            'first_name' => [
-                'type'       => 'VARCHAR',
-                'constraint' => 100,
-                'null'       => false
-            ],
-            'last_name' => [
-                'type'       => 'VARCHAR',
-                'constraint' => 100,
-                'null'       => false
-            ],
             'email' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 150,
                 'null'       => false,
                 'unique'     => true
             ],
-            'phone_number' => [
+            'password' => [
                 'type'       => 'VARCHAR',
-                'constraint' => 15,
+                'constraint' => 255,
                 'null'       => false
             ],
             'role' => [
                 'type'       => 'ENUM',
                 'constraint' => ['Super Admin', 'Admin', 'Moderator'],
                 'default'    => 'Admin'
-            ],
-            'permissions' => [
-                'type'       => 'TEXT',
-                'null'       => true
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
