@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ParentModel extends Model
 {
     protected $table            = 'parents';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'parent_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

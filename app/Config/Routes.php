@@ -30,6 +30,100 @@ $routes->post('setting', 'Setting::create');
 $routes->get('setting/edit/(:num)', 'Setting::edit/$1');         
 $routes->post('setting/(:num)', 'Setting::update/$1'); 
 $routes->delete('setting/(:num)', 'Setting::delete/$1');
+// Classes Routes
+$routes->get('classes', 'Classes::index');           
+$routes->get('classes/(:num)', 'Classes::view/$1');  
+$routes->post('classes', 'Classes::create');
+$routes->get('classes/edit/(:num)', 'Classes::edit/$1');         
+$routes->post('classes/(:num)', 'Classes::update/$1'); 
+$routes->delete('classes/(:num)', 'Classes::delete/$1');
+// Fee Routes
+$routes->get('fee', 'Fee::index');           
+$routes->get('fee/(:num)', 'Fee::view/$1');  
+$routes->post('fee', 'Fee::create');
+$routes->get('fee/edit/(:num)', 'Fee::edit/$1');         
+$routes->post('fee/(:num)', 'Fee::update/$1'); 
+$routes->delete('fee/(:num)', 'Fee::delete/$1');
+// Timetable Routes
+$routes->get('timetable', 'Timetable::index');           
+$routes->get('timetable/(:num)', 'Timetable::view/$1');  
+$routes->post('timetable', 'Timetable::create');
+$routes->get('timetable/edit/(:num)', 'Timetable::edit/$1');      
+$routes->post('timetable/(:num)', 'Timetable::update/$1'); 
+$routes->delete('timetable/(:num)', 'Timetable::delete/$1');
+// Notification Routes
+$routes->get('notification', 'Notification::index');           
+$routes->get('notification/(:num)', 'Notification::view/$1');  
+$routes->post('notification', 'Notification::create');
+$routes->get('notification/edit/(:num)', 'Notification::edit/$1');      
+$routes->post('notification/(:num)', 'Notification::update/$1'); 
+$routes->delete('notification/(:num)', 'Notification::delete/$1');  
+// MedicalRecord Routes
+$routes->get('medicalrecord', 'MedicalRecord::index');           
+$routes->get('medicalrecord/(:num)', 'MedicalRecord::view/$1');  
+$routes->post('medicalrecord', 'MedicalRecord::create');
+$routes->get('medicalrecord/edit/(:num)', 'MedicalRecord::edit/$1');      
+$routes->post('medicalrecord/(:num)', 'MedicalRecord::update/$1'); 
+$routes->delete('medicalrecord/(:num)', 'MedicalRecord::delete/$1');  
+// Homework Routes
+$routes->get('homework', 'Homework::index');           
+$routes->get('homework/(:num)', 'Homework::view/$1');  
+$routes->post('homework', 'Homework::create');
+$routes->get('homework/edit/(:num)', 'Homework::edit/$1');      
+$routes->post('homework/(:num)', 'Homework::update/$1'); 
+$routes->delete('homework/(:num)', 'Homework::delete/$1');  
+// Library Routes
+$routes->get('library', 'Library::index');           
+$routes->get('library/(:num)', 'Library::view/$1');  
+$routes->post('library', 'Library::create');
+$routes->get('library/edit/(:num)', 'Library::edit/$1');      
+$routes->post('library/(:num)', 'Library::update/$1'); 
+$routes->delete('library/(:num)', 'Library::delete/$1');
+// Driver Routes
+$routes->get('driver', 'Driver::index');           
+$routes->get('driver/(:num)', 'Driver::view/$1');  
+$routes->post('driver', 'Driver::create');
+$routes->get('driver/edit/(:num)', 'Driver::edit/$1');      
+$routes->post('driver/(:num)', 'Driver::update/$1'); 
+$routes->delete('driver/(:num)', 'Driver::delete/$1');
+
+
+
+//teacher
+
+$routes->get('teacher', 'Teacher::index');           
+$routes->get('teacher/(:num)', 'Teacher::view/$1');  
+$routes->post('teacher', 'Teacher::create');
+$routes->get('teacher/edit/(:num)', 'teacher::edit/$1');         
+$routes->post('teacher/(:num)', 'Teacher::update/$1'); 
+$routes->delete('teacher/(:num)', 'Teacher::delete/$1'); 
+
+//students
+$routes->get('student', 'Student::index');           
+$routes->get('student/(:num)', 'Student::view/$1');  
+$routes->post('student', 'Student::create');
+$routes->get('student/edit/(:num)', 'Student::edit/$1');         
+$routes->post('student/(:num)', 'Student::update/$1'); 
+$routes->delete('student/(:num)', 'Student::delete/$1');
+
+//parents
+$routes->get('parents', 'Parents::index');           
+$routes->get('parents/(:num)', 'Parents::view/$1');  
+$routes->post('parents', 'Parents::create');
+$routes->get('parents/edit/(:num)', 'Parents::edit/$1');         
+$routes->post('parents/(:num)', 'Parents::update/$1');
+$routes->delete('parents/(:num)', 'Parents::delete/$1');
+
+//Attendence
+$routes->get('attendance', 'Attendance::index');           
+$routes->get('attendance/(:num)', 'Attendance::view/$1');  
+$routes->post('attendance', 'Student::Attendance');
+$routes->get('attendance/edit/(:num)', 'Attendance::edit/$1');         
+$routes->post('attendance/(:num)', 'Attendance::update/$1'); 
+$routes->delete('attendance/(:num)', 'Attendance::delete/$1'); 
+
+
+
 
 
 $routes->group("api", function ($routes) {

@@ -38,7 +38,7 @@ class AddTeacher extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
                 'null'       => false,
-                'unique'     => true,
+              
             ],
             'phone_number' => [
                 'type'       => 'VARCHAR',
