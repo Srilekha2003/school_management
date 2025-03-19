@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Database\Migrations;
 
@@ -40,7 +40,7 @@ class AddStudent extends Migration
             'class_id' => [
                 'type'       => 'BIGINT',
                 'unsigned'   => true,
-                'null'       => false,
+                'null'       => true,//false
             ],
             'roll_number' => [
                 'type'       => 'INT',
@@ -49,11 +49,16 @@ class AddStudent extends Migration
             'parent_id' => [
                 'type'       => 'BIGINT',
                 'unsigned'   => true,
-                'null'       => false,
+                'null'       => true,//false
             ],
             'address' => [
                 'type' => 'TEXT',
                 'null' => true,
+            ],
+            'email' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 255,
+                'null'       => false,
             ],
             'admission_date' => [
                 'type' => 'DATE',
@@ -63,10 +68,13 @@ class AddStudent extends Migration
                 'constraint' => ['Active', 'Inactive'],
                 'default'    => 'Active',
             ],
-            'discontinuation_status' => [
-                'type'       => 'BOOLEAN',
-                'default'    => false,
+           'discontinuation_status' => [
+                'type'       => 'TINYINT',
+                'constraint' => 1,
+                'null'       => false,
+                'default'    => 0, 
             ],
+
             'discontinuation_reason' => [
                 'type'       => 'TEXT',
                 'null'       => true,
@@ -76,8 +84,9 @@ class AddStudent extends Migration
                 'null' => true,
             ],
             'rejoined' => [
-                'type'       => 'BOOLEAN',
-                'default'    => false,
+                'type'       => 'TINYINT',
+                'constraint' => 1,
+                'default'    => 0, // Default is false
             ],
             'rejoining_date' => [
                 'type' => 'DATE',
@@ -113,16 +122,19 @@ class AddStudent extends Migration
                 'null' => true,
             ],
             'created_at' => [
-                'type' => 'TIMESTAMP',
-                'null' => true
-                ],
+                'type'    => 'TIMESTAMP',
+                'null'    => true,
+                'default' => null
+            ],
             'updated_at' => [
-                'type' => 'TIMESTAMP',
-                'null' => true
+                'type'    => 'TIMESTAMP',
+                'null'    => true,
+                'default' => null
             ],
             'deleted_at' => [
-                'type' => 'TIMESTAMP',
-                'null' => true,
+                'type'    => 'TIMESTAMP',
+                'null'    => true,
+                'default' => null
             ],
         ]);
 
@@ -130,8 +142,8 @@ class AddStudent extends Migration
         $this->forge->addPrimaryKey('student_id');
 
         // Foreign Keys
-        $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
-        $this->forge->addForeignKey('parent_id', 'parents', 'parent_id', 'CASCADE', 'CASCADE');
+        // $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
+        // $this->forge->addForeignKey('parent_id', 'parents', 'parent_id', 'CASCADE', 'CASCADE');
 
         // Create Table
         $this->forge->createTable('students');
@@ -139,6 +151,7 @@ class AddStudent extends Migration
 
     public function down()
     {
-        $this->forge->dropTable('students');
+        $this->forge->dropTable('students', true);
     }
+
 }
