@@ -28,10 +28,8 @@ class AddHomework extends Migration
                 'null'       => false,
             ],
             'assigned_by' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
-                'null'       => false,
+               'type'       => 'TEXT',
+                'null'       => true, 
             ],
             'assigned_date' => [
                 'type' => 'DATE',
