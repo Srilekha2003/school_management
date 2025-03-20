@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class TransportRoutesModel extends Model
 {
     protected $table            = 'transportroutes';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'route_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

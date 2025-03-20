@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class CulturalModel extends Model
 {
     protected $table            = 'culturals';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'event_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

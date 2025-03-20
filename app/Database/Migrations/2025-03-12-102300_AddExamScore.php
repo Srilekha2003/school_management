@@ -69,8 +69,8 @@ class AddExamScore extends Migration
         ]);
 
         $this->forge->addPrimaryKey('score_id');
-        // $this->forge->addForeignKey('exam_id', 'exams', 'exam_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('exam_id', 'exams', 'exam_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('examscores');
     }

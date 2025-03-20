@@ -10,7 +10,7 @@ class AddTransport extends Migration
     {
         // Transport Table
         $this->forge->addField([
-            'transport_id' => [
+            'id' => [
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -63,7 +63,7 @@ class AddTransport extends Migration
         ]);
 
         // Primary Key
-        $this->forge->addPrimaryKey('transport_id');
+        $this->forge->addPrimaryKey('id');
 
         // Foreign Keys
         // $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');

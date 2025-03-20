@@ -9,7 +9,7 @@ class AddFee extends Migration
     public function up()
     {
         $this->forge->addField([
-            'fee_id' => [
+            'id' => [
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -68,7 +68,7 @@ class AddFee extends Migration
             ],
         ]);
 
-        $this->forge->addKey('fee_id', true);
+        $this->forge->addKey('id', true);
         $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('fees');
