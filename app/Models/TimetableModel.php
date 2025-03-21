@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class TimetableModel extends Model
 {
     protected $table            = 'timetables';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'timetable_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

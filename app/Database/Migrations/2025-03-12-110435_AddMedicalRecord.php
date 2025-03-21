@@ -9,7 +9,7 @@ class AddMedicalRecord extends Migration
     public function up()
     {
         $this->forge->addField([
-            'medical_id' => [
+            'id' => [
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -54,7 +54,7 @@ class AddMedicalRecord extends Migration
             ],
         ]);
 
-        $this->forge->addPrimaryKey('medical_id');
+        $this->forge->addPrimaryKey('id');
         $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('medicalrecords');

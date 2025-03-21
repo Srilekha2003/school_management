@@ -121,9 +121,77 @@ $routes->post('attendance', 'Student::Attendance');
 $routes->get('attendance/edit/(:num)', 'Attendance::edit/$1');         
 $routes->post('attendance/(:num)', 'Attendance::update/$1'); 
 $routes->delete('attendance/(:num)', 'Attendance::delete/$1'); 
+// ProgressCard
+$routes->get('progresscard', 'ProgressCard::index');           
+$routes->get('progresscard/(:num)', 'ProgressCard::view/$1');  
+$routes->post('progresscard', 'Student::ProgressCard');
+$routes->get('progresscard/edit/(:num)', 'ProgressCard::edit/$1');         
+$routes->post('progresscard/(:num)', 'ProgressCard::update/$1'); 
+$routes->delete('progresscard/(:num)', 'ProgressCard::delete/$1');  
 
+// Cultural
+$routes->get('cultural', 'Cultural::index');           
+$routes->get('cultural/(:num)', 'Cultural::view/$1');  
+$routes->post('cultural', 'Student::Cultural');
+$routes->get('cultural/edit/(:num)', 'Cultural::edit/$1');         
+$routes->post('cultural/(:num)', 'Cultural::update/$1'); 
+$routes->delete('cultural/(:num)', 'Cultural::delete/$1');  
 
+// ExamScore
+$routes->get('examscore', 'ExamScore::index');           
+$routes->get('examscore/(:num)', 'ExamScore::view/$1');  
+$routes->post('examscore', 'Student::ExamScore');
+$routes->get('examscore/edit/(:num)', 'ExamScore::edit/$1');         
+$routes->post('examscore/(:num)', 'ExamScore::update/$1'); 
+$routes->delete('examscore/(:num)', 'ExamScore::delete/$1');  
 
+// Exam
+$routes->get('exam', 'Exam::index');           
+$routes->get('exam/(:num)', 'Exam::view/$1');  
+$routes->post('exam', 'Student::Exam');
+$routes->get('exam/edit/(:num)', 'Exam::edit/$1');         
+$routes->post('exam/(:num)', 'Exam::update/$1'); 
+$routes->delete('exam/(:num)', 'Exam::delete/$1');  
+
+// Transport
+$routes->get('transport', 'Transport::index');           
+$routes->get('transport/(:num)', 'Transport::view/$1');  
+$routes->post('transport', 'Student::Transport');
+$routes->get('transport/edit/(:num)', 'Transport::edit/$1');         
+$routes->post('transport/(:num)', 'Transport::update/$1'); 
+$routes->delete('transport/(:num)', 'Transport::delete/$1');  
+
+// TransportRoute
+$routes->get('transportroutes', 'TransportRoutes::index');           
+$routes->get('transportroutes/(:num)', 'TransportRoutes::view/$1');  
+$routes->post('transportroutes', 'Student::TransportRoutes');
+$routes->get('transportroutes/edit/(:num)', 'TransportRoutes::edit/$1');         
+$routes->post('transportroutes/(:num)', 'TransportRoutes::update/$1'); 
+$routes->delete('transportroutes/(:num)', 'TransportRoutes::delete/$1');  
+
+// Bus
+$routes->get('bus', 'Bus::index');           
+$routes->get('bus/(:num)', 'Bus::view/$1');  
+$routes->post('bus', 'Student::Bus');
+$routes->get('bus/edit/(:num)', 'Bus::edit/$1');         
+$routes->post('bus/(:num)', 'Bus::update/$1'); 
+$routes->delete('bus/(:num)', 'Bus::delete/$1');  
+
+// Hostel
+$routes->get('hostel', 'Hostel::index');           
+$routes->get('hostel/(:num)', 'Hostel::view/$1');  
+$routes->post('hostel', 'Student::Hostel');
+$routes->get('hostel/edit/(:num)', 'Hostel::edit/$1');         
+$routes->post('hostel/(:num)', 'Hostel::update/$1'); 
+$routes->delete('hostel/(:num)', 'Hostel::delete/$1');  
+// Subject Routes
+
+$routes->get('subject', 'Subject::index');              
+$routes->get('subject/(:num)', 'Subject::view/$1');     
+$routes->post('subject', 'Subject::create');            
+$routes->get('subject/edit/(:num)', 'Subject::edit/$1'); 
+$routes->post('subject/(:num)', 'Subject::update/$1'); 
+$routes->delete('subject/(:num)', 'Subject::delete/$1'); 
 
 
 $routes->group("api", function ($routes) {

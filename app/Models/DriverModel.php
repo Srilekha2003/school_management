@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class DriverModel extends Model
 {
     protected $table            = 'drivers';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'driver_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

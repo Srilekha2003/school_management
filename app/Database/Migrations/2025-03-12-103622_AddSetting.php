@@ -9,7 +9,7 @@ class AddSetting extends Migration
     public function up()
     {
         $this->forge->addField([
-            'setting_id' => [
+            'id' => [
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -53,7 +53,7 @@ class AddSetting extends Migration
             ]
         ]);
 
-        $this->forge->addKey('setting_id', true);
+        $this->forge->addKey('id', true);
         $this->forge->createTable('settings');
     }
 

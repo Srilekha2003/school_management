@@ -17,53 +17,57 @@ class AddProgressCard extends Migration
             ],
             'student_id' => [
                 'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true
+                'unsigned'   => true,
+                'null'       => false,
             ],
             'exam_id' => [
                 'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true
+                'unsigned'   => true,
+                'null'       => false,
             ],
             'total_marks' => [
                 'type'       => 'INT',
-                'constraint' => 10
+                'constraint' => 10,
+                'null'       => false,
             ],
             'obtained_marks' => [
                 'type'       => 'INT',
-                'constraint' => 10
+                'constraint' => 10,
+                'null'       => false,
             ],
             'percentage' => [
                 'type'       => 'DECIMAL',
-                'constraint' => '5,2'
+                'constraint' => '5,2',
+                'null'       => false,
             ],
             'rank' => [
                 'type'       => 'INT',
                 'constraint' => 10,
-                'null'       => true
+                'null'       => true,
             ],
             'grade' => [
                 'type'       => 'VARCHAR',
-                'constraint' => 5
+                'constraint' => 5,
+                'null'       => false,
             ],
             'result_status' => [
                 'type'       => 'ENUM',
                 'constraint' => ['Pass', 'Fail'],
-                'default'    => 'Pass'
+                'null'       => false,
             ],
             'overall_remarks' => [
-                'type' => 'TEXT',
-                'null' => true
+                'type'       => 'TEXT',
+                'null'       => true,
             ],
             'teacher_signature' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'null'       => true
+                'null'       => false,
             ],
             'principal_signature' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 255,
-                'null'       => true
+                'null'       => false,
             ],
             'created_at' => [
                 'type'    => 'TIMESTAMP',
@@ -79,18 +83,22 @@ class AddProgressCard extends Migration
                 'type'    => 'TIMESTAMP',
                 'null'    => true,
                 'default' => null
-            ]
+            ],
         ]);
 
+        // Primary Key
         $this->forge->addPrimaryKey('progress_card_id');
+
+        // Foreign Keys
         $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('exam_id', 'exams', 'exam_id', 'CASCADE', 'CASCADE');
-        $this->forge->createTable('progress_cards');
-    }
 
+        // Create Table
+        $this->forge->createTable('progresscards');
+    }
 
     public function down()
     {
-        $this->forge->dropTable('progress_cards');
+        $this->forge->dropTable('progresscards', true);
     }
 }

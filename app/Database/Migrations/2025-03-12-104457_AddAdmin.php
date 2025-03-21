@@ -9,7 +9,7 @@ class AddAdmin extends Migration
     public function up()
     {
         $this->forge->addField([
-            'admin_id' => [
+            'id' => [
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -48,7 +48,7 @@ class AddAdmin extends Migration
             ],
         ]);
 
-        $this->forge->addPrimaryKey('admin_id');
+        $this->forge->addPrimaryKey('id');
         $this->forge->createTable('admins');
     }
 

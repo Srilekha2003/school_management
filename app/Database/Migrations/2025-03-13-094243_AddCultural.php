@@ -17,7 +17,7 @@ class AddCultural extends Migration
             ],
             'event_name' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
                 'null'       => false,
             ],
             'date_time' => [
@@ -26,19 +26,19 @@ class AddCultural extends Migration
             ],
             'venue' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '255',
+                'constraint' => 255,
                 'null'       => false,
             ],
             'category' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '100',
+                'constraint' => 100,
                 'null'       => false,
             ],
             'event_coordinator_id' => [
                 'type'       => 'BIGINT',
                 'constraint' => 20,
                 'unsigned'   => true,
-                'null'       => false,
+                'null'       => false, // Required field, does not allow NULL values
             ],
             'awards_recognitions' => [
                 'type' => 'TEXT',
@@ -72,18 +72,14 @@ class AddCultural extends Migration
                 'default' => null,
             ],
         ]);
-        
 
         $this->forge->addPrimaryKey('event_id');
-        $this->forge->addForeignKey('event_coordinator_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
-
-      
-        $this->forge->createTable('culturals'); 
+        
+        $this->forge->createTable('culturals', true);
     }
 
     public function down()
     {
-       
         $this->forge->dropTable('culturals', true);
     }
 }

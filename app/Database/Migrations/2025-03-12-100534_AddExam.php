@@ -9,7 +9,7 @@ class AddExam extends Migration
     public function up()
     {
         $this->forge->addField([
-            'exam_id' => [
+            'id' => [
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -68,9 +68,9 @@ class AddExam extends Migration
             ],
         ]);
 
-        $this->forge->addPrimaryKey('exam_id');
+        $this->forge->addPrimaryKey('id');
         // $this->forge->addForeignKey('subject_id', 'subjects', 'subject_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('exams');
     }
