@@ -184,10 +184,14 @@ $routes->post('hostel', 'Student::Hostel');
 $routes->get('hostel/edit/(:num)', 'Hostel::edit/$1');         
 $routes->post('hostel/(:num)', 'Hostel::update/$1'); 
 $routes->delete('hostel/(:num)', 'Hostel::delete/$1');  
+// Subject Routes
 
-
-
-
+$routes->get('subject', 'Subject::index');              
+$routes->get('subject/(:num)', 'Subject::view/$1');     
+$routes->post('subject', 'Subject::create');            
+$routes->get('subject/edit/(:num)', 'Subject::edit/$1'); 
+$routes->post('subject/(:num)', 'Subject::update/$1'); 
+$routes->delete('subject/(:num)', 'Subject::delete/$1'); 
 
 
 $routes->group("api", function ($routes) {

@@ -4,15 +4,23 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ExamScoreModel extends Model
+class SubjectModel extends Model
 {
-    protected $table            = 'examscores';
-    protected $primaryKey       = 'score_id';
+    protected $table            = 'subjects';
+    protected $primaryKey       = 'subject_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['exam_id','student_id','marks_obtained','total_marks','percentage','grade','result_status','remarks'];
+    protected $allowedFields = [
+        'subject_name',
+        'teacher_id',
+        'syllabus',
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+    
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

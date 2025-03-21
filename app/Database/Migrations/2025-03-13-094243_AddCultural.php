@@ -74,9 +74,7 @@ class AddCultural extends Migration
         ]);
 
         $this->forge->addPrimaryKey('event_id');
-        // $this->forge->addForeignKey('event_coordinator_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
-
-        // Ensure it does not create if already exists
+        
         $this->forge->createTable('culturals', true);
     }
 

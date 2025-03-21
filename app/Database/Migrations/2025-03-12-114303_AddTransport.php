@@ -66,10 +66,10 @@ class AddTransport extends Migration
         $this->forge->addPrimaryKey('id');
 
         // Foreign Keys
-        // $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('route_id', 'transport_routes', 'route_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('bus_id', 'buses', 'bus_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('driver_id', 'drivers', 'driver_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('route_id', 'transport_routes', 'route_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('bus_id', 'buses', 'bus_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('driver_id', 'drivers', 'driver_id', 'CASCADE', 'CASCADE');
 
         // Create Table
         $this->forge->createTable('transports');

@@ -60,8 +60,8 @@ class AddAttendance extends Migration
         ]);
 
         $this->forge->addPrimaryKey('attendance_id');
-        // $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('teacher_id', 'teachers', 'teacher_id', 'SET NULL', 'CASCADE');
+        $this->forge->addForeignKey('student_id', 'students', 'student_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('teacher_id', 'teachers', 'teacher_id', 'SET NULL', 'CASCADE');
 
         $this->forge->createTable('attendances');
     }
