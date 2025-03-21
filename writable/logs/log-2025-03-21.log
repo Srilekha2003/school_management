@@ -1,0 +1,240 @@
+INFO - 2025-03-21 01:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-21 01:11:18 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-21 01:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-21 01:16:08 --> InvalidArgumentException: key must be a string when using hmac
+[Method: POST, Route: authenticate]
+in FCPATH\vendor\firebase\php-jwt\src\JWT.php on line 249.
+ 1 FCPATH\vendor\firebase\php-jwt\src\JWT.php(219): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTE5NzY4LCJleHAiOjE3NDI1MjMzNjh9', false, 'HS256')
+ 2 APPPATH\Helpers\jwt_helper.php(8): Firebase\JWT\JWT::encode([...], false, 'HS256')
+ 3 APPPATH\Controllers\AdminLogin.php(58): generateJWT([...], false)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-21 01:20:35 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-21 01:21:51 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-21 01:23:06 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-21 01:24:18 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-21 01:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-21 01:27:21 --> mysqli_sql_exception: Table 'school_management.tokens' doesn't exist in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `to...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `to...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `to...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `to...', Array, false)
+#4 C:\xampp\htdocs\school_management\app\Controllers\AdminLogin.php(64): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\school_management\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-03-21 01:27:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'school_management.tokens' doesn't exist
+[Method: POST, Route: authenticate]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (:loginId:, :role:, :token:, :refresh_token:, :created_at:, :expires_at:, :refresh_expires_at:)', [...], false)
+ 2 APPPATH\Controllers\AdminLogin.php(64): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-21 01:27:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'school_management.tokens' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (\'2\', \'admin\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDI1MjQwNDF9.ZOApM-FZoRzSdzsp8S4TNyYwnvdJ71M4ASPOU0531_g\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDMxMjUyNDF9.uSaQY9EpNw87ayqsPNHIHrv5SWXXJyEdfcFyp7vmhco\', \'2025-03-21 01:27:21\', \'2025-03-21 02:27:21\', \'2025-03-28 01:27:21\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (\'2\', \'admin\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDI1MjQwNDF9.ZOApM-FZoRzSdzsp8S4TNyYwnvdJ71M4ASPOU0531_g\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDMxMjUyNDF9.uSaQY9EpNw87ayqsPNHIHrv5SWXXJyEdfcFyp7vmhco\', \'2025-03-21 01:27:21\', \'2025-03-21 02:27:21\', \'2025-03-28 01:27:21\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (:loginId:, :role:, :token:, :refresh_token:, :created_at:, :expires_at:, :refresh_expires_at:)', [...], false)
+ 4 APPPATH\Controllers\AdminLogin.php(64): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-21 01:27:21 --> [Caused by] mysqli_sql_exception: Table 'school_management.tokens' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (\'2\', \'admin\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDI1MjQwNDF9.ZOApM-FZoRzSdzsp8S4TNyYwnvdJ71M4ASPOU0531_g\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDMxMjUyNDF9.uSaQY9EpNw87ayqsPNHIHrv5SWXXJyEdfcFyp7vmhco\', \'2025-03-21 01:27:21\', \'2025-03-21 02:27:21\', \'2025-03-28 01:27:21\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (\'2\', \'admin\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDI1MjQwNDF9.ZOApM-FZoRzSdzsp8S4TNyYwnvdJ71M4ASPOU0531_g\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDMxMjUyNDF9.uSaQY9EpNw87ayqsPNHIHrv5SWXXJyEdfcFyp7vmhco\', \'2025-03-21 01:27:21\', \'2025-03-21 02:27:21\', \'2025-03-28 01:27:21\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (\'2\', \'admin\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDI1MjQwNDF9.ZOApM-FZoRzSdzsp8S4TNyYwnvdJ71M4ASPOU0531_g\', \'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImxvZ2luSWQiOiIyIiwiaWF0IjoxNzQyNTIwNDQxLCJleHAiOjE3NDMxMjUyNDF9.uSaQY9EpNw87ayqsPNHIHrv5SWXXJyEdfcFyp7vmhco\', \'2025-03-21 01:27:21\', \'2025-03-21 02:27:21\', \'2025-03-28 01:27:21\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tokens` (`loginId`, `role`, `token`, `refresh_token`, `created_at`, `expires_at`, `refresh_expires_at`) VALUES (:loginId:, :role:, :token:, :refresh_token:, :created_at:, :expires_at:, :refresh_expires_at:)', [...], false)
+ 5 APPPATH\Controllers\AdminLogin.php(64): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-03-21 01:40:05 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:41:41 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:42:40 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:43:36 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:44:11 --> mysqli_sql_exception: Invalid default value for 'created_at' in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:44:40 --> mysqli_sql_exception: Can't create table `school_management`.`tokens` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:45:07 --> mysqli_sql_exception: Can't create table `school_management`.`tokens` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-03-21 01:45:34 --> mysqli_sql_exception: Can't create table `school_management`.`tokens` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\xampp\htdocs\school_management\app\Database\Migrations\2025-03-21-013913_CreateTokensTable.php(24): CodeIgniter\Database\Forge->createTable('tokens')
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateTokensTable->up()
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\school_management\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2025-03-21 01:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-21 01:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

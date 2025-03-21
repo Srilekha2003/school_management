@@ -12,16 +12,7 @@ class AdminModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = [
-        'admin_id',
-        'first_name',
-        'last_name',
-        'email',
-        'phone_number',
-        'role',
-        'permissions'
-    ];
-    
+    protected $allowedFields    = ['email', 'password', 'role'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -30,7 +21,7 @@ class AdminModel extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';

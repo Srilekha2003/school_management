@@ -1,0 +1,396 @@
+INFO - 2025-03-20 05:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-20 05:44:05 --> mysqli_sql_exception: Table 'school_management.admins' doesn't exist in C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('sai@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sai@gmail.com', Array, Array, 'email')
+#7 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\school_management\app\Controllers\AdminRegister.php(26): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\AdminRegister->register()
+#10 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminRegister))
+#11 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\school_management\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\school_management\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-03-20 05:44:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'school_management.admins' doesn't exist
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `admins`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('sai@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sai@gmail.com', [...], [...], 'email')
+ 5 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\AdminRegister.php(26): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminRegister->register()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminRegister))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 05:44:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'school_management.admins' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `admins`
+WHERE `email` = \'sai@gmail.com\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `admins`
+WHERE `email` = \'sai@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `admins`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('sai@gmail.com', 'email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sai@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\AdminRegister.php(26): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminRegister->register()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminRegister))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 05:44:05 --> [Caused by] mysqli_sql_exception: Table 'school_management.admins' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 1
+FROM `admins`
+WHERE `email` = \'sai@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `admins`
+WHERE `email` = \'sai@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `admins`
+WHERE `email` = \'sai@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `admins`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('sai@gmail.com', 'email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sai@gmail.com', [...], [...], 'email')
+ 8 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\AdminRegister.php(26): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminRegister->register()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminRegister))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 05:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 05:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 05:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 05:51:11 --> Error: Call to undefined function set_value()
+[Method: POST, Route: register]
+in APPPATH\Views\register.php on line 14.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('register', [], true)
+ 4 APPPATH\Controllers\AdminRegister.php(37): view('register', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminRegister->register()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminRegister))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 05:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 05:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 05:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 06:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 09:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 09:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 09:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 09:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 09:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 09:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-20 10:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 10:09:22 --> ErrorException: Undefined property: App\Controllers\AdminLogin::$model
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 27.
+ 1 APPPATH\Controllers\AdminLogin.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AdminLogin::$model', 'C:\\xampp\\htdocs\\school_management\\app\\Controllers\\AdminLogin.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 10:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 10:11:49 --> Error: Cannot call constructor
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 10:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 10:12:41 --> Error: Cannot call constructor
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 10:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 10:12:44 --> Error: Cannot call constructor
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 10:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-20 10:12:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 10:12:54 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-20 11:05:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 11:05:42 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-20 11:08:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 11:08:46 --> Error: Class "App\Controllers\JWT" not found
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-20 11:17:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 11:17:02 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-20 11:17:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 11:17:05 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-03-20 11:17:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-20 11:17:07 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 11:35:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 11:35:10 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 11:35:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 11:35:12 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 11:37:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 11:37:06 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 11:39:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 11:39:25 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 11:39:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 11:39:46 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 11:50:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 11:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 11:50:29 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 12:34:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 12:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 12:34:40 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-03-20 12:40:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\AdminLogin::$model is deprecated in APPPATH\Controllers\AdminLogin.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\AdminLogin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-20 12:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-20 12:40:40 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: authenticate]
+in APPPATH\Controllers\AdminLogin.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminLogin->authenticate()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLogin))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(50): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
