@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class ExamScoreModel extends Model
 {
     protected $table            = 'examscores';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'score_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

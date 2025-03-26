@@ -69,9 +69,9 @@ class AddTimetable extends Migration
         ]);
 
         $this->forge->addPrimaryKey('timetable_id');
-        // $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('class_id', 'classes', 'class_id', 'CASCADE', 'CASCADE');
         // $this->forge->addForeignKey('subject_id', 'subjects', 'subject_id', 'CASCADE', 'CASCADE');
-        // $this->forge->addForeignKey('teacher_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('teacher_id', 'teachers', 'teacher_id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('timetables');
     }

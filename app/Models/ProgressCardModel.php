@@ -7,23 +7,23 @@ use CodeIgniter\Model;
 class ProgressCardModel extends Model
 {
     protected $table            = 'progresscards';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'progress_card_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['progress_card_id',
-        'student_id',
-        'exam_id',
-        'total_marks',
-        'obtained_marks',
-        'percentage',
-        'rank',
-        'grade',
-        'result_status',
-        'overall_remarks',
-        'teacher_signature',
-        'principal_signature'];
+    protected $allowedFields    = [ 'student_id',
+    'exam_id',
+    'total_marks' ,
+    'obtained_marks' ,
+    'percentage',
+    'rank',
+    'grade',
+    'result_status',
+    'overall_remarks'    ,
+    'teacher_signature' ,
+    'principal_signature',
+];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

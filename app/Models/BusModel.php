@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class BusModel extends Model
 {
     protected $table            = 'buses';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'bus_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class HostelModel extends Model
 {
     protected $table            = 'hostels';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'hostel_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
